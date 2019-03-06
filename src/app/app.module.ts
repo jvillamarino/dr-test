@@ -8,14 +8,19 @@ import { AppComponent } from './app.component';
 import { environment } from './../environments/environment.prod';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { AngularFireModule } from '@angular/fire';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
+
+
 
 const COMMON_MODULE = [
   BrowserAnimationsModule,
   BrowserModule,
   AppRoutingModule,
-  AngularFireModule.initializeApp(environment),
-  AngularFireAuthModule
+  AngularFireModule.initializeApp(environment.firebase),
+  AngularFireAuthModule,
+  MatSnackBarModule
 ]
+
 
 @NgModule({
   declarations: [

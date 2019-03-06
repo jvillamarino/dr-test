@@ -1,5 +1,6 @@
-<form style="margin:25vh auto auto auto" class="container" fxLayout="row wrap"
-  [formGroup]="form" fxLayoutAlign="center center" fxLayoutGap="1px">
+<form style="margin:25vh auto auto auto" class="container" fxLayout="row wrap" [formGroup]="form"
+  fxLayoutAlign="center center" fxLayoutGap="1px">
+
   <mat-form-field appearance="outline" fxFlex="50%">
     <mat-label>Email</mat-label>
     <input formControlName="email" matInput type="email" placeholder="example@email.com">
@@ -13,20 +14,8 @@
 
 </form>
 <div fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="10px">
-    <button
-      (click)="emailLogin()"
-      [disabled]="form.valid ? false : true"
-      mat-raised-button
-      color="accent"
-    >
-      Log In <mat-icon>arrow_forward_ios</mat-icon>
-    </button>
-    <button
-    mat-raised-button
-    (click)="googleLogin()"
-  >
-  <img src="../../../../assets/imgs/google-icon.png" alt="Google Login" style="height:30px">
-    Sign In with Google
+  <button (click)="signUp()" [disabled]="form.valid ? false : true" mat-raised-button color="accent"> {{btnText}}
+    <mat-icon>arrow_forward_ios</mat-icon>
   </button>
   <mat-spinner *ngIf="isLoading"></mat-spinner>
-  </div>
+</div>

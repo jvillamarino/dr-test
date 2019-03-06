@@ -6,13 +6,15 @@ import { BrandBarComponent } from './brand-bar.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatButtonModule } from '@angular/material/button';
+import {MatIconModule} from '@angular/material/icon';
 
 const COMMON_MODULES = [
   CommonModule,
   MatToolbarModule,
   MatButtonModule,
   FlexLayoutModule,
-  RouterModule
+  RouterModule,
+  MatIconModule
 ]
 
 @NgModule({

@@ -1,7 +1,6 @@
 import { MatButtonModule } from '@angular/material/button';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormLoginComponent } from './form-login.component';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatIconModule } from '@angular/material/icon';
@@ -21,10 +20,12 @@ const COMMON_MODULE = [
   ReactiveFormsModule,
   MatProgressSpinnerModule
 ]
+import { FormRegisterComponent } from './form-register.component';
+
 
 @NgModule({
-  declarations: [FormLoginComponent],
+  declarations: [FormRegisterComponent],
   imports: COMMON_MODULE,
-  exports: [FormLoginComponent]
+  exports: [FormRegisterComponent]
 })
-export class FormLoginModule { }
+export class FormRegisterModule { }

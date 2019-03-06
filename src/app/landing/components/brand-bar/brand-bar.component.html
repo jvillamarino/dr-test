@@ -1,7 +1,12 @@
 <mat-toolbar fxLayout="row" fxLayoutAlign="space-between center">
   <img src="../../../../assets/imgs/logo.png" alt="Logo DR Security" style="height:60px">
-  <div fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="10px">
-     <a routerLink="login" mat-raised-button>Login</a>
-     <a routerLink="register" mat-raised-button>Register</a>
+  <div fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="10px" fxHide.lt-sm="true">
+    <a routerLink="/authentication" mat-raised-button>
+      <mat-icon>account_circle</mat-icon>Login
+    </a>
+    <a routerLink="/authentication/register" mat-raised-button>
+      <mat-icon>person_add</mat-icon>
+      Register
+    </a>
   </div>
 </mat-toolbar>
