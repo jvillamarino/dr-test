@@ -13,7 +13,10 @@ import { MatBadgeModule } from '@angular/material/badge';
 import { CoreLayout } from './core.layout';
 
 const routes: Routes = [{
-  path: '', component: CoreLayout, pathMatch:'full'
+  path: '', component: CoreLayout, children:[
+    {path:'', pathMatch:'full', redirectTo:'visit-register'},
+    {path:'visit-register', loadChildren:'../../visit/layout/visit.module#VisitModule'}
+  ]
 }]
 
 const COMMON_MODULE = [

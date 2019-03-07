@@ -6,29 +6,21 @@
     </h1>
     <mat-nav-list>
       <a mat-list-item>
+        <mat-icon matListIcon>add</mat-icon>
+        <span>Registrar Visita</span>
+      </a>
+      <a routerLinkActive="active" mat-list-item>
         <mat-icon matListIcon>search</mat-icon>
-        <span>Buscar</span>
+        <span>Buscar visita</span>
       </a>
       <a routerLinkActive="active" mat-list-item>
-        <mat-icon matListIcon>update</mat-icon>
-        <span>Todos</span>
-      </a>
-      <a routerLinkActive="active" mat-list-item>
-        <mat-icon matListIcon>attach_money</mat-icon>
-        <span>Pagados</span>
-      </a>
-      <a routerLinkActive="active" mat-list-item>
-        <mat-icon matListIcon>update</mat-icon>
-        <span>Pendientes</span>
-      </a>
-      <a mat-list-item routerLink="/taxes/predios/payment">
-        <mat-icon matListIcon>payment</mat-icon>
-        <span matBadge="{{payments}}" matBadgeOverlap="false">Pagar</span>
+        <mat-icon matListIcon>all_inclusive</mat-icon>
+        <span>Todas las visitas</span>
       </a>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
-    <div fxLayout="column">
+    <div fxLayout="column" fxFlex="100">
       <mat-toolbar fxLayout="row" fxLayoutAlign="space-between center" color="white">
         <div fxLayout="row" fxLayoutAlign="center center">
           <button (click)="snav.toggle()" mat-icon-button>
@@ -42,10 +34,10 @@
           </button>
         </div>
       </mat-toolbar>
-      <div fxFlex="1 0 auto" class="content-container">
-        <router-outlet></router-outlet>
-        <!-- <tax-table></tax-table> -->
-      </div>
+      <div fxFlex="100%" class="content-container">
+          <router-outlet></router-outlet>
+        </div>
     </div>
+   
   </mat-sidenav-content>
 </mat-sidenav-container>

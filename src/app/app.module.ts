@@ -9,6 +9,7 @@ import { environment } from './../environments/environment.prod';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { AngularFireModule } from '@angular/fire';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
+import { HttpClientModule } from '@angular/common/http';
 
 
 
@@ -18,7 +19,8 @@ const COMMON_MODULE = [
   AppRoutingModule,
   AngularFireModule.initializeApp(environment.firebase),
   AngularFireAuthModule,
-  MatSnackBarModule
+  MatSnackBarModule,
+  HttpClientModule
 ]
 
 

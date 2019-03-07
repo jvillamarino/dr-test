@@ -1,0 +1,37 @@
+<form fxLayout="row wrap" [formGroup]="form" fxLayoutAlign="center center" fxLayoutGap="10px">
+
+  <mat-form-field appearance="outline" fxFlex="30%">
+    <mat-label>Nombre</mat-label>
+    <input formControlName="name" matInput type="name" placeholder="Juan jose">
+    <mat-icon fxHide="form.get('name').invalid" class="done" matSuffix>done</mat-icon>
+  </mat-form-field>
+  <div fxFlex="70%"></div>
+  <mat-form-field appearance="outline" fxFlex="35%">
+    <mat-label>Primer Apellido</mat-label>
+    <input formControlName="first_surname" matInput type="text" placeholder="Peréz">
+    <mat-icon fxHide="form.get('first_surname').invalid" class="done" matSuffix>done</mat-icon>
+  </mat-form-field>
+
+  <mat-form-field appearance="outline" fxFlex="35%">
+    <mat-label>Segundo Apellido</mat-label>
+    <input formControlName="second_surname" matInput type="text" placeholder="Lopez">
+    <mat-icon fxHide="form.get('second_surname').invalid" class="done" matSuffix>done</mat-icon>
+  </mat-form-field>
+  
+  <div fxFlexOffset="30%"></div>
+
+  <mat-form-field appearance="outline" fxFlex="80%">
+    <mat-label>Mótivo de la visita</mat-label>
+    <input formControlName="reason" matInput type="text" placeholder="Consulta tecnologíca">
+    <mat-icon fxHide="form.get('reason').invalid" class="done" matSuffix>done</mat-icon>
+  </mat-form-field>
+
+
+</form>
+<div fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="10px">
+  <button (click)="save()" [disabled]="form.valid ? false : true" mat-raised-button color="primary">
+    Save <mat-icon>save</mat-icon>
+  </button>
+
+  <mat-spinner *ngIf="isLoading"></mat-spinner>
+</div>
