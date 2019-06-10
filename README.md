@@ -70,6 +70,7 @@ Asi como tambien podemos definir el tipo de dato que vamos a recibir como argume
 ---
 Consola 
 > saludarAmigo('Hola', 'Jesus');
+
 > Hola, Jesus.
 ---
 
@@ -78,6 +79,7 @@ En la función anterior vimos que le podemos pasar variables para saludar a una 
 ---
 Consola
 > saludarAmigo('Jesus', 'Hola');
+
 > Jesus, Hola.
 ---
 Por lo que para resolver esto solamente es necesario asignarle un nombre al argumento que le estamos pasando a la función y recibir los argumentos como un objeto, como lo siguiente.
@@ -107,9 +109,6 @@ Consola
 ---
 
 Por lo que nos damos cuenta que sin importar el orden en el que pasamos los argumentos, el resultado será siempre el correcto.
-
-
-
 
 
 
