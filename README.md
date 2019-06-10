@@ -60,6 +60,7 @@ Las funciones en Dart, al igual que las variables, es necesario definir el tipo 
         return 'Esta función devuelve un String';
     }
 ```
+
 Asi como tambien podemos definir el tipo de dato que vamos a recibir como argumento. Se recomienda seguir esta platica para mejorar la legibilidad del código asi como tambien evitamos que salgan errores. _Basura que entra, basura que sale._
  ```Dart 
     void saludarAmigo(String saludo, String nombrePersona){
@@ -75,13 +76,16 @@ Consola
 ---
 
 #### Lo que veo como Pattern Matching en las funciones
+
 En la función anterior vimos que le podemos pasar variables para saludar a una persona, pero que pasa si alteramos el orden en que pasamos los argumentos a la función? Tendremos algo como lo siguiente.
+
 ---
 Consola
 > saludarAmigo('Jesus', 'Hola');
 
 > Jesus, Hola.
 ---
+
 Por lo que para resolver esto solamente es necesario asignarle un nombre al argumento que le estamos pasando a la función y recibir los argumentos como un objeto, como lo siguiente.
 
 ``` Dart
